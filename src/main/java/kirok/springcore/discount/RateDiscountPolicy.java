@@ -1,8 +1,12 @@
 package kirok.springcore.discount;
 
+import kirok.springcore.annotation.MainDiscountPolicy;
 import kirok.springcore.member.Grade;
 import kirok.springcore.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
+@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;
